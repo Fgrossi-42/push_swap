@@ -6,11 +6,11 @@
 /*   By: fgrossi <fgrossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 12:50:22 by fgrossi           #+#    #+#             */
-/*   Updated: 2022/03/03 12:50:24 by fgrossi          ###   ########.fr       */
+/*   Updated: 2022/04/29 13:21:30 by fgrossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "swap.h"
+#include "../Include/swap.h"
 
 int	charsep(char c, char del)
 {

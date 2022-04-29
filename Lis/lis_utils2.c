@@ -6,11 +6,11 @@
 /*   By: fgrossi <fgrossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 12:50:49 by fgrossi           #+#    #+#             */
-/*   Updated: 2022/03/03 12:50:49 by fgrossi          ###   ########.fr       */
+/*   Updated: 2022/04/29 13:21:08 by fgrossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "swap.h"
+#include "../Include/swap.h"
 
 unsigned int	count_offset(t_lis lis_list, int count, int index)
 {

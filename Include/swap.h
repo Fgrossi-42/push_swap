@@ -6,7 +6,7 @@
 /*   By: fgrossi <fgrossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 12:51:45 by fgrossi           #+#    #+#             */
-/*   Updated: 2022/03/03 12:51:45 by fgrossi          ###   ########.fr       */
+/*   Updated: 2022/04/29 15:14:06 by fgrossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,7 +133,7 @@ void			solve_5(t_list **a, t_list *list, int index);
 void			re_order_a(t_list **a);
 void			solve_500(t_list **a, t_list *b, int index);
 void			push_lis(t_list **a, t_list **b, t_lis lis_list, int index);
-void			control_how_to(t_list **a, t_list **b, t_content bag);
+void			control_how_to(t_list **a, t_list **b, t_content *bag);
 void			back_to_norm(t_list **a, t_list **b, t_content bag, int *c);
 void			back_to_normal_util(t_list **a, t_list **b, t_content bag);
 int				how_many_sb(t_list **a, t_list **b, t_content bag);

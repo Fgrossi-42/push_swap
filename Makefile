@@ -1,52 +1,47 @@
-
 NAME = push_swap
 
 CC = gcc
-CLFAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
-FILES = main \
-		ctrl_control \
-		ctrl_split \
-		ctrl_arrcheck \
-		instructions \
-		instructions2 \
-		solve_1 \
-		solve_2 \
-		solve_3 \
-		solve_4 \
-		solve_5 \
-		solve_utils \
-		solve_utils2 \
-		utils \
-		utils_arr \
-		lis_utils \
-		lis_utils2 \
+FILES = ./Src/main \
+		./Controls/ctrl_control \
+		./Src/ctrl_split \
+		./Controls/ctrl_arrcheck \
+		./Src/instructions \
+		./Src/instructions2 \
+		./Solutions/solve_1 \
+		./Solutions/solve_2 \
+		./Solutions/solve_3 \
+		./Solutions/solve_4 \
+		./Solutions/solve_5 \
+		./Solutions/solve_utils \
+		./Solutions/solve_utils2 \
+		./Src/utils \
+		./Src/utils_arr \
+		./Lis/lis_utils \
+		./Lis/lis_utils2 \
 
+SRCS_DIR = ./
+SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
 
-SRCS = $(addsuffix .c, $(FILES))
+OBJS_DIR = ./
+OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
 
-OBJS = $(addsuffix .o, $(FILES))
+.c.o: $(SRCS)
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME): $(OBJS)
-	@printf "povero gabbbiano, ha perduto la cumbaaagnaaaaa\n"
 	$(CC) -o $(NAME) $^ 
 
-%.o : %.c
-	$(CC) -c $^ 
-
 all: $(NAME)
-
-deb: $(SRCS)
-	$(CC) $(CFLAGS) $^ -o $(NAME) -g
 
 clean:
 	$(RM) $(OBJS)
 
-fclean:
-	$(RM) $(OBJS) $(NAME)
+fclean: clean
+	$(RM) $(NAME)
 
 re: clean all
 
-.PHONY: all clean fclean re deb
-
+.PHONY: bonus all clean fclean re

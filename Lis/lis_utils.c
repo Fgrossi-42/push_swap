@@ -6,11 +6,11 @@
 /*   By: fgrossi <fgrossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 12:50:41 by fgrossi           #+#    #+#             */
-/*   Updated: 2022/03/03 12:50:41 by fgrossi          ###   ########.fr       */
+/*   Updated: 2022/04/29 15:16:24 by fgrossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "swap.h"
+#include "../Include/swap.h"
 
 int	*confront(t_lis lis_list, int count, int index)
 {
@@ -66,11 +66,11 @@ unsigned int	max_elements(int *lis, int n)
 
 	count = 0;
 	i = 0;
-	while (i < n)
+	while (i < (unsigned int)n)
 	{
-		if (lis[i] > count)
+		if ((unsigned int)lis[i] > count)
 		{
-			count = lis[i];
+			count = (unsigned int)lis[i];
 		}
 		i++;
 	}
@@ -85,6 +85,8 @@ int	*lis(int *arr, int n, int *count)
 	int	i;
 	int	j;
 
+	lis = NULL;
+	array = NULL;
 	lis = fill_arr_lis(lis, n);
 	array = fill_arr_lis(array, n);
 	i = 0;

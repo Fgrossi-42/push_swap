@@ -6,11 +6,11 @@
 /*   By: fgrossi <fgrossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 12:51:03 by fgrossi           #+#    #+#             */
-/*   Updated: 2022/03/03 12:51:03 by fgrossi          ###   ########.fr       */
+/*   Updated: 2022/04/29 13:21:16 by fgrossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "swap.h"
+#include "../Include/swap.h"
 
 int	how_many_ra(t_list **a, int num, t_content bag)
 {

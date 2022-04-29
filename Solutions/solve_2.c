@@ -6,11 +6,11 @@
 /*   By: fgrossi <fgrossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 12:50:59 by fgrossi           #+#    #+#             */
-/*   Updated: 2022/03/03 12:50:59 by fgrossi          ###   ########.fr       */
+/*   Updated: 2022/04/29 15:16:32 by fgrossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "swap.h"
+#include "../Include/swap.h"
 
 void	solve_500(t_list **a, t_list *b, int index)
 {
@@ -24,32 +24,32 @@ void	solve_500(t_list **a, t_list *b, int index)
 	lis_list.clear_arr = calloc(sizeof(int), count);
 	lis_list.clear_arr = confront(lis_list, count, (index - 1));
 	push_lis(a, &b, lis_list, index);
-	control_how_to(a, &b, bag);
+	control_how_to(a, &b, &bag);
 	re_order_a(a);
 }
 
-void	control_how_to(t_list **a, t_list **b, t_content bag)
+void	control_how_to(t_list **a, t_list **b, t_content *bag)
 {
 	int		i;
 	t_list	*last_a;
 
-	bag.max_lis_a = max_list(*a);
-	bag.min_lis_a = min_list(*a);
-	bag.max_b = max_list(*b);
-	bag.min_b = min_list(*b);
+	bag->max_lis_a = max_list(*a);
+	bag->min_lis_a = min_list(*a);
+	bag->max_b = max_list(*b);
+	bag->min_b = min_list(*b);
 	while (*b)
 	{
 		last_a = ft_lstlast(*a);
-		while (check_for_condition(a, b, bag))
+		while (check_for_condition(a, b, *bag))
 		{
-			if ((*b)->cnt == bag.max_b && (*a)->cnt == min_list(*a)
+			if ((*b)->cnt == bag->max_b && (*a)->cnt == min_list(*a)
 				&& last_a->cnt == max_list(*a))
 				break ;
-			if ((*b)->cnt == bag.min_b && (*a)->cnt == min_list(*a)
+			if ((*b)->cnt == bag->min_b && (*a)->cnt == min_list(*a)
 				&& last_a->cnt == max_list(*a))
 				break ;
-			i = control_moves(a, b, bag);
-			if (choose(a, b, i, bag))
+			i = control_moves(a, b, *bag);
+			if (choose(a, b, i, *bag))
 				break ;
 		}
 		push_a(a, b);

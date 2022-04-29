@@ -6,11 +6,11 @@
 /*   By: fgrossi <fgrossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 12:50:04 by fgrossi           #+#    #+#             */
-/*   Updated: 2022/03/03 12:50:05 by fgrossi          ###   ########.fr       */
+/*   Updated: 2022/04/29 15:16:36 by fgrossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "swap.h"
+#include "../Include/swap.h"
 
 void	rotate_a_b(t_list **list, t_list **listb, bool allow)
 {
@@ -86,7 +86,7 @@ void	fill_list(t_list *temp_list, int index)
 	unsigned int	i;
 
 	i = 0;
-	while (i < index)
+	while (i < (unsigned int)index)
 	{
 		temp_list->cnt = ft_atoi(temp_list->str_temp);
 		temp_list->index = i;
