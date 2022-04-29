@@ -1,4 +1,4 @@
-#PUSH_SWAP
+# push_swap
   my push_swap project at 42 school
   
   final score 96/100, works really quickly and passes all th test up to the 500 numbers test
